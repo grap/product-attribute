@@ -13,7 +13,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
         <field name="arch" type="xml">
             <field name="display_name" position="after">
                 <field string="Products Quantity" name="product_count" />
-                <field name="product_qty" />
+                <field name="product_variant_count" />
             </field>
         </field>
     </record>
@@ -31,7 +31,9 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                     context="{'search_default_categ_id': active_id}"
                 >
                     <div class="o_field_widget o_stat_info">
-                        <span class="o_stat_value"><field name="product_qty" /></span>
+                        <span class="o_stat_value"><field
+                                name="product_variant_count"
+                            /></span>
                         <span class="o_stat_text"> Variants</span>
                     </div>
                 </button>

@@ -19,7 +19,7 @@ class TestProductCategory(common.TransactionCase):
 
         # Check computed value
         category1._compute_multi_qty()
-        self.assertEqual(category1.product_qty, 0)
+        self.assertEqual(category1.product_variant_count, 0)
 
         # Change categories
         self.product_corner_desk.write(
@@ -30,4 +30,4 @@ class TestProductCategory(common.TransactionCase):
 
         # Check computed value
         category1._compute_multi_qty()
-        self.assertEqual(category1.product_qty, 1)
+        self.assertEqual(category1.product_variant_count, 1)

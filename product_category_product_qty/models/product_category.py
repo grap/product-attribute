@@ -9,7 +9,7 @@ class ProductCategory(models.Model):
     _inherit = "product.category"
 
     # Columns Section
-    product_qty = fields.Integer(
+    product_variant_count = fields.Integer(
         compute="_compute_multi_qty", string="Variants Quantity"
     )
 
@@ -20,4 +20,4 @@ class ProductCategory(models.Model):
         for item in search:
             res[item["categ_id"][0]] = item["categ_id_count"]
         for category in self:
-            category.product_qty = res.get(category.id, 0)
+            category.product_variant_count = res.get(category.id, 0)
