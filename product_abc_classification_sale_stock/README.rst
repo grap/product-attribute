@@ -31,6 +31,8 @@ Product Abc Classification based on delivered products
 This modules includes an ABC analysis computation profile based
 on the number of sale order lines delivered from a given date by product.
 
+TEST CI.
+
 **Table of contents**
 
 .. contents::
